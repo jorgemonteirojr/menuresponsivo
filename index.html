@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <a href="£">LOGO</a>
+        <a href="£" class="logo">LOGO</a>
         <div class="barra">
             <ul class="navegacao">
                 <li><a href="£">Inicio</a></li>
@@ -21,13 +21,30 @@
             </ul>
             <div class="pesquisa">
                 <span class="icone">
-                    <ion-icon name="search-outline"></ion-icon>
-                    <ion-icon name="close-outline"></ion-icon>
+                    <ion-icon name="search-outline" class="searchb"></ion-icon>
+                    <ion-icon name="close-outline" class="closeb"></ion-icon>
                 </span>
+            </div>
+            <div class="boxpesquisa">
+                <input type="text" placeholder="Pesquise Aqui">
             </div>
         </div>
     </header>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let searchb = document.querySelector('.searchb');
+        let closeb = document.querySelector('.closeb');
+        let pesquisa = document.querySelector('.pesquisa');
+
+        searchb.onclick = function(){
+            pesquisa.classList.add('active');
+        }
+        closeb.onclick = function(){
+            pesquisa.classList.remove('active');
+        }
+
+    </script>
 </body>
 </html>
